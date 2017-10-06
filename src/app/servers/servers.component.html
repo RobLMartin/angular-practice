@@ -1,18 +1,11 @@
 <button
   class="btn btn-primary"
-  [disabled]="!allowNewServer">Add Server</button>
-
-<!-- Property Binding vs String Interpolation doing the same thing.
-Property Binding
-<p [innerText]="allowNewServer"></p>
-
-String Interpolation
-<p>{{ allowNewServer }}</p>
-
-----
-Important note: Don't mix these methods.
-                Template will break.
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()">Add Server</button>
+<!--
+  You can bind to all the events made available by the HTML attribute
+  you are placing event binding on.
  -->
-
+<p>{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>
