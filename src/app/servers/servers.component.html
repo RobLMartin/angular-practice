@@ -5,6 +5,12 @@
   (input)="onUpdateServerName($event)">-->
 
 <!--React to events in both directions.-->
+<!--Important note: For two way binding to work, you need to enable
+                    the ngModel directive. This is done by adding the
+                    FormsModule to the imports[] array in the AppModule.
+                    You also need to import the @angular/forms in the
+                    app.module.ts file.
+-->
 <input
 type="text"
 class="form-control"
