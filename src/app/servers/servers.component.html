@@ -12,18 +12,23 @@
                     app.module.ts file.
 -->
 <input
-type="text"
-class="form-control"
-[(ngModel)]="serverName">
-<p>{{ serverName }}</p>
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+<!--Two way binding to fetch input data.-->
+<!--<p>{{ serverName }}</p>-->
 <button
   class="btn btn-primary"
   [disabled]="!allowNewServer"
   (click)="onCreateServer()">Add Server</button>
+<!--All Forms of Databinding: Event binding to listen to the click-->
+<!--All Forms of Databinding: Property Binding to enable this button-->
 <!--
   You can bind to all the events made available by the HTML attribute
   you are placing event binding on.
  -->
 <p>{{ serverCreationStatus }}</p>
+<!--All Forms of Databinding: String interpolation to output data.-->
+
 <app-server></app-server>
 <app-server></app-server>
