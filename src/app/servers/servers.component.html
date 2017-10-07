@@ -27,7 +27,8 @@
   You can bind to all the events made available by the HTML attribute
   you are placing event binding on.
  -->
-<p>{{ serverCreationStatus }}</p>
+ <p *ngIf="serverCreated">Server was created, server name is  {{ serverName }}</p>
+<!--<p>{{ serverCreationStatus }}</p>-->
 <!--All Forms of Databinding: String interpolation to output data.-->
 
 <app-server></app-server>
